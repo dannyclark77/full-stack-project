@@ -1,4 +1,4 @@
-class PlayersController < ApplicationController
+class PlayersController < OpenReadController
   before_action :set_player, only: [:show, :update, :destroy]
 
   # GET /players

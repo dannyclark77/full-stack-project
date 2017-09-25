@@ -1,5 +1,5 @@
-class TeamsController < ApplicationController
-  before_action :set_team, only: [:show, :update, :destroy]
+class TeamsController < OpenReadController
+  before_action :set_team, only: [:update, :destroy]
 
   # GET /teams
   def index
@@ -10,12 +10,12 @@ class TeamsController < ApplicationController
 
   # GET /teams/1
   def show
-    render json: @team
+    render json: Team.find(params[:id])
   end
 
   # POST /teams
   def create
-    @team = Team.new(team_params)
+    @team = current_user.teams.build(team_params)
 
     if @team.save
       render json: @team, status: :created
@@ -27,7 +27,7 @@ class TeamsController < ApplicationController
   # PATCH/PUT /teams/1
   def update
     if @team.update(team_params)
-      render json: @team
+      head :no_content
     else
       render json: @team.errors, status: :unprocessable_entity
     end
@@ -36,16 +36,17 @@ class TeamsController < ApplicationController
   # DELETE /teams/1
   def destroy
     @team.destroy
+
+    head :no_content
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_team
-      @team = Team.find(params[:id])
-    end
+  def set_team
+    @team = current_user.teams.find(params[:id])
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def team_params
-      params.require(:team).permit(:player_id, :user_id)
-    end
+  def team_params
+    params.require(:team).permit(:player_id, :user_id)
+  end
+
+  private :set_team, :team_params
 end
