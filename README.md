@@ -1,15 +1,45 @@
-To Be Updated
+Ironside's All Time Top 7 Team: https://dannyclark77.github.io/ironside_top_seven/
 
-Here's a rough sketch of what you should do and in what order:
+A full-stack project by Danny Clark
 
-[X] After receiving the project prompt, decide what kind of app to make, and begin sketching some rough wireframes for how the front end will look and act.
-[X] Think about what kind of data your front-end will need from your back-end, and how that data will be used. Create an ERD.
-[X] Create two repos that your project will use, and add READMEs to both.
-[X] Create a simple front-end with HTML and CSS based (loosely) on your wireframes.
-[X] User our rails-api-template for your back-end. It already includes authentication.
-[X] After you have an ERD, check with a consultant to ensure your data model is appropriate for your goals. Then, build the     models and migrations to represent this data. Test your models using the Rails console, and test your API endpoints using curl. You may also write automated tests in RSpec if you choose.
-[X] Before working on the front-end application, ensure all back-end endpoints work as expected. Knowing the back-end well will help you diagnose bugs on the front-end.
-[ ] Write your front-end application using JavaScript, jQuery, and AJAX.
-[ ] Test, commit, and deploy often! Test, commit, deploy! Test your deployments!
-[ ] When main features are finished, begin working on stretch goals and icebox features.
-[ ] Finish your documentation. Make it high-quality.
+This app was designed at General Assembly as part of the Web Development
+Immersive coding bootcamp. It was designed to allow users to create an
+all-time team of the top 7 players to ever play for Boston Ironside, a
+national champion ultimate frisbee team.
+
+After signing in, a user can view the full roster of the team for any particular
+year by selecting the year from the column on the left. With the roster
+populated, a user may then populate their all-time top 7 by clicking on any
+player's name. This will automatically populate the list on the right. A user
+is only allowed seven players on their all-time team. If they select more than
+seven players, the oldest of the seven selected is cleared from the screen.
+Players may be deleted simply by clicking on their name in the right column.
+If more than seven players have been selected, when one is deleted, the most
+recent selection that is not visible will be added back to the seven visible
+players on the screen.
+
+Technologies used on the back end include:
+-Ruby
+-Rails
+-Heroku to host the server
+
+In the future, I hope to improve the app in two ways:
+- Set up a function to find whether a name is already included on the list, and
+if so, refuse to add the player to the list. Currently, a player who was on
+the team in multiple years could end up with their name on a single person's
+list multiple times because each year's name has a separate id.
+- Create a display of other users' teams to create discussion and debate.
+
+My wireframe is here: https://imgur.com/ogkgyeB
+My ERD is here: https://imgur.com/V1mxkiZ
+
+My user stories that I used to guide me in this process are:
+1. As a young ultimate player, I want to know who the best ultimate players to
+have played for Boston Ironside are.
+2. As a fan of ultimate, I want to be able to participate in a crowd-sourced
+poll to have a say as to who the best players to play for Boston Ironside were.
+3. As an older fan, I want to be able to compare older players to today's
+generation to see where they match up.
+
+Front-End Repo: https://github.com/dannyclark77/ironside_top_seven
+Back-End Server: https://afternoon-earth-95866.herokuapp.com/
