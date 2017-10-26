@@ -43,3 +43,9 @@ generation to see where they match up.
 
 Front-End Repo: https://github.com/dannyclark77/ironside_top_seven
 Back-End Server: https://afternoon-earth-95866.herokuapp.com/
+
+To-Do List:
+- Add column to team table --> team_name
+- Change team requirements from only one player_id per user_id to one player_id
+per team_name
+- Require team_name with post request
