@@ -49,3 +49,4 @@ To-Do List:
 - Change team requirements from only one player_id per user_id to one player_id
 per team_name
 - Require team_name with post request
+- Property on model to say completed - after_save method in ruby - not creating circular dependency
