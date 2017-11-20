@@ -45,7 +45,7 @@ class TeamsController < OpenReadController
   end
 
   def team_params
-    params.require(:team).permit(:player_id, :user_id)
+    params.require(:team).permit(:player_id, :user_id, :team_name)
   end
 
   private :set_team, :team_params
