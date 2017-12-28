@@ -273,6 +273,6 @@ players = Player.create([
   # { name: 'Josh Markette', year: 2010 },
   # { name: 'Paul Batten', year: 2010 },
   # { name: 'Danny Clark', year: 2010 },
-  { name: 'Jon Hirschberger', year: 2016 },
-  { name: 'Jordan Taylor', year: 2016 }
+  # { name: 'Jon Hirschberger', year: 2016 },
+  # { name: 'Jordan Taylor', year: 2016 }
 ])
