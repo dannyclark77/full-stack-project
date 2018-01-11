@@ -3,7 +3,7 @@ class PlayersController < OpenReadController
 
   # GET /players
   def index
-    @players = Player.all
+    @players = Player.where(year: params[:year])
 
     render json: @players
   end
